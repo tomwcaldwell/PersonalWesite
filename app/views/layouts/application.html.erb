@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tom Caldwell</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tags %>
+
+  <%= favicon_link_tag 'favicon-32x32.png' %>
+  <%= favicon_link_tag 'favicon-16x16.png' %>
+</head>
+<body>
+
+	<%= render 'layouts/navigation' %>
+	<%= render 'layouts/title' %>
+  <%= render 'layouts/messages' %>
+	<%= yield %>
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

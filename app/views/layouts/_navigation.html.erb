@@ -1,0 +1,39 @@
+<div class="navbar navbar-default navbar-fixed-top">
+
+	<div><a href="http://www.twitter.com/tc_web_dev" target="_blank"><%= image_tag('twitter.png', id: "twit_head", style: "float:left;") %></a></div>
+
+	<div class="container">
+
+		<div class="navbar-header">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border:none;">
+
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+			</button>
+
+		</div>
+
+		<div class="collapse navbar-collapse">
+
+			<ul class="nav navbar-nav">
+
+				<li><%= link_to("HOME", root_path) %></li>
+				<li><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li>
+				<li><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li>
+				<li><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li>
+				<li style="border:none;"><%= link_to("CONTACT", {:controller => 'pages', :action => 'contact'}) %></li>
+				<% if signed_in? %>
+					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
+				<% end %>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>

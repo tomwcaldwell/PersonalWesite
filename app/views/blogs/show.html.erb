@@ -1,0 +1,57 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<h2 style="text-align:center; font-size:32px;"><%= @blog.title %></h2>
+
+			<p style="text-align:center; font-size:14px;">Written by: Tom Caldwell (Admin)</p>
+
+			<br />
+
+			<div class="col-md-4 col-md-offset-4">
+				
+				<p style="text-align:center;"><%= simple_format(@blog.content) %></p>
+
+				<br />
+				<br />
+
+				<p style="text-align:center; font-size:14px;">Posted on: <%= @blog.created_at.strftime('%d %b, %Y at %H:%M') %></p>
+
+				<br />
+
+				<div style="text-align:center;"><%= social_share_button_tag(@blog.title, :popup => "true") %></div>
+
+				<br />
+				<br />
+
+				<% if signed_in? %>
+
+					<p style="text-align: center;">
+						<%= link_to("Edit Blog Post", edit_blog_path(@blog)) %><br />
+					</p>
+
+					<p style="text-align: center;">
+						<%= link_to("Delete Blog Post", blog_path(@blog), method: :delete, data: { confirm: "Are you sure?" }) %><br />
+					</p>
+
+				<% end %>
+
+			</div>	
+
+		</div>
+
+		<div class="col-md-12">
+
+			<br />
+
+			<p>
+				<%= link_to("<< Back", blogs_path) %>
+			</p>
+
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<h1 style="text-align:center; font-size:32px;">Blog</h1>
+			
+			<br />
+
+			
+			<% if signed_in? %>
+				<p style="text-align:center;">
+					<%= link_to("New Blog Post", new_blog_path) %>
+				</p>
+
+			<% end %>
+
+			<br />
+
+			<br />
+
+			<br />
+
+			<% @blogs.each do |blog| %>
+
+				<div class="blog_index">
+
+					<div class="col-md-4 col-md-offset-4">
+
+						<h2><%= link_to(blog.title, blog) %></h2>
+
+						<p>Posted on: <%= blog.created_at.strftime('%d %b, %Y at %H:%M') %></p><br />
+						
+						<p><%= simple_format(truncate(blog.content, length:200)) %></p><br />
+
+						<br />
+
+						<%= social_share_button_tag(blog.title, :popup => "true") %>
+
+						<br />
+
+						<hr />
+
+					</div>
+
+				</div>
+
+			<% end %>
+
+		</div>
+
+	</div>
+
+</div>
