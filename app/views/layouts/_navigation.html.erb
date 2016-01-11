@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top fadeIn">
 
 	<div><a href="http://www.twitter.com/tc_web_dev" target="_blank"><%= image_tag('twitter.png', id: "twit_head", style: "float:left;") %></a></div>
 
@@ -37,3 +37,9 @@
 	</div>
 
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('.fadeIn').fadeIn(1000);
+	});
+</script>
