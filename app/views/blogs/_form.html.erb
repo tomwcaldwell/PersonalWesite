@@ -4,9 +4,11 @@
 
 		<div class="col-md-6 col-md-offset-3">
 
-			<%= bootstrap_form_for @blog do |f| %>
+			<%= bootstrap_form_for @blog, html: { multipart: true } do |f| %>
 
 					<%= f.text_field :title %>
+
+					<%= f.file_field :image %>
 
 					<%= f.text_area :content %>
 

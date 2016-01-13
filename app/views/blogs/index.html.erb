@@ -18,10 +18,6 @@
 
 			<br />
 
-			<br />
-
-			<br />
-
 			<% @blogs.each do |blog| %>
 
 				<div class="blog_index">
@@ -31,7 +27,11 @@
 						<h2><%= link_to(blog.title, blog) %></h2>
 
 						<p>Posted on: <%= blog.created_at.strftime('%d %b, %Y at %H:%M') %></p><br />
-						
+
+				
+						<%= image_tag blog.image.url(:thumb) %><br />
+
+
 						<p><%= simple_format(truncate(blog.content, length:200)) %></p><br />
 
 						<br />
