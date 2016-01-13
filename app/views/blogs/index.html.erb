@@ -28,8 +28,11 @@
 
 						<p>Posted on: <%= blog.created_at.strftime('%d %b, %Y at %H:%M') %></p><br />
 
-				
-						<%= image_tag blog.image.url(:thumb) %><br />
+						<% if blog.image.file? %>
+
+							<%= image_tag blog.image.url(:thumb) %><br />
+
+						<% end %>
 
 
 						<p><%= simple_format(truncate(blog.content, length:200)) %></p><br />
