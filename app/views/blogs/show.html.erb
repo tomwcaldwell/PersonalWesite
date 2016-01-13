@@ -61,6 +61,16 @@
 				</p>
 
 				<br />
+
+				<% if signed_in? %>
+
+					<p style="text-align:center;">
+						<%= link_to("Delete Comment", [comment.blog, comment], method: :delete, data: { confirm: 'Are you sure?' }) %><br />
+					</p>
+
+				<% end %> 
+
+				<br />
 				<br />
 
 			<% end %>
