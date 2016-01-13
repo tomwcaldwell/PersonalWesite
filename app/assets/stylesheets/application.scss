@@ -234,6 +234,7 @@ body{
 	width:100%;
 	background-color: orange;
 	padding-top:30px;
+	margin-bottom:20px;
 	ul {
 		list-style-type:none;
 	}
@@ -249,9 +250,13 @@ body{
 }
 
 .photo {
-	margin: 0 auto;
-	display:inline-block;
+	margin-bottom:20px;
+	padding:0;
 	text-align:center;
+}
+
+.commentStyle {
+	font-size:15px;
 }
 
 

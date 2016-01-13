@@ -2,26 +2,20 @@
 
 	<div class="row">
 
+		<div class="col-md-6 col-md-offset-3">
+
+			<p id="intro">Hi, I'm Tom. I am a freelance web developer in Southern England, UK. Please visit the <span style="font-weight:bold;"><%= link_to("About", { :action => 'about'}) %></span> page for more information on what I do and visit the <span style="font-weight:bold;"><%= link_to("Portfolio", { :action => 'portfolio'}) %></span> page for examples of my work so far!</p>
+
+
+		</div>
+
 		<div class="col-md-12">
 
-			<div class="">
-				
-				<div class="col-md-12">
-
-				<p id="intro">Hi, I'm Tom. I am a freelance web developer in Southern England, UK. Please visit the <span style="font-weight:bold;"><%= link_to("About", { :action => 'about'}) %></span> page for more information on what I do and visit the <span style="font-weight:bold;"><%= link_to("Portfolio", { :action => 'portfolio'}) %></span> page for examples of my work so far!</p>
-
-			</div>
-
-			</div>
+			
+			<%= image_tag('home_image.jpg', style: "width:100%; height:50% !important; margin-bottom:20px;") %>
 
 		</div>
 
 	</div>
 
 </div>
-
-<script>
-	$(document).ready(function(){
-		$('.fadeIn').fadeIn(5000);
-	});
-</script>
