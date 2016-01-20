@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   resources :blogs do
     resources :comments
   end
+
+  get 'about', to: 'pages#about'
+  get 'portfolio', to: 'pages#portfolio'
+  get 'contact', to: 'pages#contact'
+
+  get 'blog', to: 'blogs#index'
   
   match ':controller(/:action(/:id))', :via => [:get, :post]
 
