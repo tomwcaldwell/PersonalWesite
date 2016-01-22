@@ -31,6 +31,14 @@
 h1, h2, h3, h4, p, a, tr, td {
 	font-family: Geneva;
 	color: white;
+	a:hover {
+		color:#E7E7E7;
+		text-decoration:none;
+	}
+	a:visited {
+		color:#E7E7E7;
+		text-decoration:none;
+	}
 }
 
 p {
@@ -41,11 +49,18 @@ ul, li {
 	list-style:none;
 }
 
+a:hover {
+	font-color:red;
+}
+
 body{
-	font-family: Geneva;
+	font-family: "Apercu Regular",Calibri,sans-serif;
 	padding:0;
 	margin-top:60px;
-	background-color:#4682B4;
+	background-color:#C0C0C0;
+	letter-spacing:1px;
+	font-weight: normal;
+	font-style: normal;
 }
 
 .fadeIn {
@@ -79,13 +94,13 @@ body{
  	text-align: center;
  	margin:0;
  	font-weight: normal;
- 	padding:0;
- 	border-right:2px solid black;
+ 	padding-top:0px;
+ 	border-right:1px solid black;
  	height: 20px;
- 	margin-top:20px;
+ 	margin-top:15px;
  	background-color: white;
  	a:hover {
- 		border-bottom: 5px solid red;
+ 		border-bottom: 2px solid #C0C0C0;
  	}
 }
 
@@ -125,6 +140,10 @@ body{
 	color: black;
 	text-align: center;
 	width:100%;
+}
+
+.home_image {
+	height: 600px;
 }
 
 #twit_head {
@@ -257,11 +276,18 @@ body{
 	font-size:15px;
 }
 
+.center {
+	text-align:center;
+}
+
 
 
 @media only screen and (max-width : 768px) {
 	.navbar .nav li {
 		border-right:none;
+		margin-top:20px;
+		height:25px;
+		padding: 2px;
 	}
 
 	#twit_head {
