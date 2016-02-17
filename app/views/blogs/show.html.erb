@@ -6,8 +6,6 @@
 
 			<h2 style="text-align:center; font-size:32px;"><%= @blog.title %></h2>
 
-			<p style="text-align:center; font-size:14px;">Written by: Tom Caldwell (Admin)</p>
-
 			<br />
 
 		</div>
@@ -16,20 +14,20 @@
 			
 			<% if @blog.image.file? %>
 
-				<%= image_tag @blog.image.url(:large), class: "photo" %>
+				<%= image_tag @blog.image.url(:large), class: "photo .img-responsive", height:"100%", width:"100%" %>
 
 			<% end %>
 
 		</div>
 
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-4 col-md-offset-4 blogArticle" style="font-size:12px;">
 			
-			<p style="text-align:center;"><%= simple_format(@blog.content) %></p>
+			<p><%= simple_format(@blog.content) %></p>
 
 			<br />
 			<br />
 
-			<p style="text-align:center; font-size:14px;">Posted on: <%= @blog.created_at.strftime('%d %b, %Y at %H:%M') %></p>
+			<p style="text-align:center; font-size:14px;">Posted on: <%= @blog.created_at.strftime('%d %b, %Y') %></p>
 
 			<br />
 

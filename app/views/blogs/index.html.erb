@@ -25,16 +25,24 @@
 
 						<h2><%= link_to(blog.title, blog) %></h2>
 
-						<p>Posted on: <%= blog.created_at.strftime('%d %b, %Y at %H:%M') %></p><br />
+						<p>Posted: <%= blog.created_at.strftime('%d %b, %Y') %></p><br />
+					</div>
+
+					<div class="col-md-6 col-md-offset-3">
 
 						<% if blog.image.file? %>
 
-							<%= image_tag blog.image.url(:thumb) %><br />
+							<%= image_tag blog.image.url(:large), class:".img-responsive", height:"100%", width:"100%" %><br /><br />
 
 						<% end %>
 
+					</div>
 
-						<p><%= simple_format(truncate(blog.content, length:200)) %></p><br />
+					<div class="col-md-4 col-md-offset-4">
+
+						<p><%= simple_format(blog.content) %></p><br />
+
+						<div style="text-align:center;"><%= social_share_button_tag(blog.title, :popup => "true") %></div>
 
 						<br />
 
@@ -45,12 +53,6 @@
 				</div>
 
 			<% end %>
-
-		</div>
-
-		<div class="center">
-
-			<%= will_paginate %>
 
 		</div>
 

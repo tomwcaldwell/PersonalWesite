@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show]
 
   def index
-  	 @blogs = Blog.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+  	 @blogs = Blog.order("created_at DESC")
   end
 
   def new
