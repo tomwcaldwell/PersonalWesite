@@ -79,4 +79,10 @@ Rails.application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { :host => 'tomcaldwellweb.herokuapp.com' }
+
+  Dynopoker.configure do |config|
+      config.address = 'http://wakemydyno.com'
+  #  config.enable = false # default is true
+  #  config.poke_frequency = 123 # default is 1800s (30min)
+  end
 end
