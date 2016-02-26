@@ -122,6 +122,12 @@ body{
  	border: none;
 }
 
+.navbar-default .navbar-nav > .active > a {
+	height: 20px;
+	background-color:white;
+	border-bottom:2px solid #C0C0C0;
+}
+
 .title {
 	margin: auto;
 	width: 100%;
