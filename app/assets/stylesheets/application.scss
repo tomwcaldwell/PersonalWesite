@@ -144,6 +144,10 @@ body{
 	width:100%;
 }
 
+.homepageTitle {
+	font-size:60px;
+}
+
 .titleBackground {
 	background-color:white !important;
 	width:100%;
@@ -204,7 +208,7 @@ body{
 	margin-bottom: 40px;
 	width: 80%;
 	margin: 0 auto;
-	text-align: justify;
+	text-align: center;
 }
 
 .tableContent {
@@ -294,7 +298,11 @@ body{
 	font-size:12px !important;
 }
 
-
+@media only screen and (max-width : 1200px) {
+	.homepageTitle {
+		font-size:40px;
+	}
+}
 
 @media only screen and (max-width : 768px) {
 	.navbar .nav li {
@@ -309,5 +317,9 @@ body{
 		margin-left:5px;
 		margin-top:0;
 		padding-bottom:0;
+	}
+
+	.homepageTitle {
+		font-size:20px;
 	}
 }

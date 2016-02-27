@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tom Caldwell</title>
+  <title>
+
+    <% if current_page?(root_path) %>Tom Caldwell<% end %>
+    <% if current_page?(about_path) %>Tom Caldwell - About<% end %>
+    <% if current_page?(portfolio_path) %>Tom Caldwell - Portfolio<% end %>
+    <% if current_page?(blogs_path) %>Tom Caldwell - Blog<% end %>
+    <% if current_page?(contact_path) %>Tom Caldwell - Contact<% end %>
+
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
@@ -17,7 +25,7 @@
 <body>
 
 	<%= render 'layouts/navigation' %>
-	<%= render 'layouts/title' %>
+  <% if !current_page?(root_path) %><%= render 'layouts/title' %><% end %>
   <br />
   <%= render 'layouts/messages' %>
 	<%= yield %>
