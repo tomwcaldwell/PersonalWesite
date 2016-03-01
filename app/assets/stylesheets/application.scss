@@ -245,13 +245,18 @@ body{
 	font-size: 17px;
 }
 
-.conservatory {
+.webApp {
 	width: 100%;
 	margin: auto;
 	text-align: center;
 	margin-bottom: 40px;
 	border-top: 2px solid white;
 	padding-top: 10px;
+	float:left;
+}
+
+.portfolio_image {
+	border-radius:50px;
 }
 
 .flash {
