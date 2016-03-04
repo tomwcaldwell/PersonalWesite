@@ -128,6 +128,10 @@ body{
 	border-bottom:2px solid #C0C0C0;
 }
 
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color:white;
+}
+
 .title {
 	margin: auto;
 	width: 100%;
