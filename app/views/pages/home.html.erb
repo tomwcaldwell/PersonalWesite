@@ -17,3 +17,38 @@
 	</div>
 
 </div>
+
+<div class="container homeNav">
+
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3">
+
+			<div id="homeNavigation">
+
+				<li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></li><br />
+				<li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></li><br />
+				<li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></li><br />
+				<li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <%= link_to("CONTACT", {:controller => 'pages', :action => 'contact'}) %> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></li><br />
+				
+				<% if signed_in? %>
+					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
+				<% end %>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fadeIn').fadeIn(1000);
+	});
+
+	$(document).ready(function(){
+		$('.homeNav').fadeIn(5000);
+	});
+</script>

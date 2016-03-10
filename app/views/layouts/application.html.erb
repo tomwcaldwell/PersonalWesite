@@ -24,12 +24,12 @@
 </head>
 <body>
 
-	<%= render 'layouts/navigation' %>
+	<% if !current_page?(root_path) %><%= render 'layouts/navigation' %><% end %>
   <% if !current_page?(root_path) %><%= render 'layouts/title' %><% end %>
   <br />
   <%= render 'layouts/messages' %>
 	<%= yield %>
-	<%= render 'layouts/footer' %>
+	<% if !current_page?(root_path) %><%= render 'layouts/footer' %><% end %>
 
 </body>
 </html>

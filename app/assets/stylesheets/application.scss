@@ -132,6 +132,25 @@ body{
 	background-color:white;
 }
 
+.homeNav {
+	display:none;
+}
+
+#homeNavigation {
+	text-align:center;
+	font-size:25px;
+	font-color:white;
+
+}
+
+#homeNavigation li a:hover {
+	color: white;
+}
+
+#homeNavigation li a {
+	color:white;
+}
+
 .title {
 	margin: auto;
 	width: 100%;
@@ -311,6 +330,11 @@ body{
 	.homepageTitle {
 		font-size:40px;
 	}
+
+	#homeNavigation {
+		font-size:20px;
+	}
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -331,4 +355,9 @@ body{
 	.homepageTitle {
 		font-size:20px;
 	}
+
+	#homeNavigation {
+		font-size:17px;
+	}
+
 }
