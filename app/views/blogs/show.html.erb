@@ -60,6 +60,12 @@
 
 				<br />
 
+				<p>
+					<%= comment.created_at.strftime('%d %b %Y, %l:%M %p') %>
+				</p>
+
+				<br />
+
 				<% if signed_in? %>
 
 					<p style="text-align:center;">
