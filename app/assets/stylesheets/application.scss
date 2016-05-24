@@ -218,6 +218,18 @@ body{
 	font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
 }
 
+.contact-info a {
+	text-decoration:none;
+}
+
+.contact-info a:hover {
+	color:white;
+}
+
+.contact-info a:visited {
+	color:white;
+}
+
 #content {
 	width: 100%;
 	padding-top: 0;
