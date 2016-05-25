@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'portfolio', to: 'pages#portfolio'
   get 'contact', to: 'contacts#new', via: 'get'
-  get 'contacts', to: 'contacts#new', via: 'get'
   get 'blog', to: 'blogs#index'
 
   resources "contacts", only: [:new, :create]
