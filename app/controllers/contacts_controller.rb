@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
       redirect_to new_contact_path
     else
 	    flash[:error] = "Cannot send message. Please try again."
-	    render :new
+	    redirect_to new_contact_path
     end
   end
 
