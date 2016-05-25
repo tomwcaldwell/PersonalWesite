@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
 	    flash[:success] = "Thank you, your message has been sent successfully. I will be in touch soon!"
-      redirect_to contact_path
+      redirect_to new_contact_path
     else
 	    flash[:error] = "Cannot send message. Please try again."
 	    render :new
