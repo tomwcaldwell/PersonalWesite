@@ -1,19 +1,24 @@
 class ContactsController < ApplicationController
 
   def new
-  	@contact = Contact.new
-  end
-
-  def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.deliver
-	    flash[:success] = "Thank you, your message has been sent successfully. I will be in touch soon!"
-      redirect_to new_contact_path
-    else
-	    flash[:error] = "Cannot send message. Please try again."
-	    redirect_to new_contact_path
+    @contact = Contact.new
+    if 
+    Contact.new(params[:contact]).deliver
+    redirect_to '/contacts/thanks', :alert => ["Yeah!"]
     end
+   else
+
+   end
+
+
+   def create
+@contact = Contact.new(params[:contact])
+    if 
+   @contact.valid?
+@contact.deliver
+   end
+   else 
+  render :new
   end
 
 end
