@@ -151,6 +151,10 @@ body{
 	color:white;
 }
 
+.hidden {
+	display: none;
+}
+
 .title {
 	margin: auto;
 	width: 100%;
@@ -230,7 +234,7 @@ body{
 	color:white;
 }
 
-#content {
+.content {
 	width: 100%;
 	padding-top: 0;
 	text-align: center;

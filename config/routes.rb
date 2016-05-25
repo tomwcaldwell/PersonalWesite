@@ -11,9 +11,10 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
   get 'portfolio', to: 'pages#portfolio'
-  get 'contact', to: 'pages#contact'
-
+  get 'contact', to: 'contacts#new', via: 'get'
   get 'blog', to: 'blogs#index'
+
+  resources "contacts", only: [:new, :create]
   
   match ':controller(/:action(/:id))', :via => [:get, :post]
 

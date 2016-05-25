@@ -2,7 +2,7 @@
 
 	<div class="row">
 
-		<div class="col-md-12">
+		<div class="col-md-8 col-md-offset-2">
 
 			<h1 style="text-align:center; font-size:32px;">Contact</h1>
 
@@ -18,7 +18,7 @@
 				<div id="primary">
 					<h3 style="font-family: Geneva;">General Information</h3>
 					<p style="font-family: Geneva; font-size:18px;">If you have any questions, please contact me!</p>
-					<p style="font-family: Geneva; font-size:18px;">If you would like to contact me, please send a direct email or you could Tweet me!</p> 
+					<p style="font-family: Geneva; font-size:18px;">If you would like to contact me, then use the contact form below. Otherwise you could send a direct email or you could Tweet me!</p> 
 					<p style="font-family: Geneva; font-size:18px;">I am available for freelance work, so please get in touch!</p>
 				</div>
 
@@ -38,7 +38,40 @@
 
 
 
-	    
+		<div class="col-md-8 col-md-offset-2">
+
+			<div class="content">
+
+				<h3 style="font-family: Geneva;">Send a message!</h3><br />
+
+				<%= bootstrap_form_for @contact, html: { multipart: true } do |f| %>
+
+					<%= f.text_field :name, required: true, placeholder: "Name", hide_label: true %>
+
+					<br />
+
+					<%= f.email_field :email, required: true, placeholder: "Email", hide_label: true %>
+
+					<br />
+
+					<%= f.text_area :message, as: :text, placeholder: "Message", hide_label: true %>
+
+					<br />
+
+					<div class="hidden">
+
+						<%= f.text_field :nickname, placeholder: "Leave Blank (Spam test)", hide_label: true %>
+
+					</div>
+
+					<%= f.submit 'Send Message' %>
+
+				<% end %>
+
+			</div>
+
+		</div>
+
 
 		<div class="col-md-6 col-md-offset-3">
 
@@ -54,7 +87,7 @@
 
 
 
-	    <div class="col-md-12">
+	    <div class="col-md-8 col-md-offset-2">
 
 			<div class="content">
 

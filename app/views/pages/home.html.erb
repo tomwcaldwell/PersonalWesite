@@ -36,7 +36,7 @@
 
 				<li><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
 
-				<li><%= link_to("CONTACT", {:controller => 'pages', :action => 'contact'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
+				<li><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
 				
 				<% if signed_in? %>
 					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
