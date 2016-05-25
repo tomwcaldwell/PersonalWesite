@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => 'tomcaldwell.co.uk', :protocol => 'https' }
+  config.action_mailer.default_url_options = { :host => 'tomcaldwell.co.uk', :protocol => 'http' }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -78,9 +78,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # Devise
-  config.action_mailer.default_url_options = { host: 'http://tomcaldwell.co.uk' }
 
   Dynopoker.configure do |config|
       config.address = 'http://wakemydyno.com'
