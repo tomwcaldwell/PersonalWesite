@@ -79,7 +79,7 @@ Rails.application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { :host => 'http://tomcaldwell.co.uk' }
-  config.actionMailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
