@@ -40,12 +40,12 @@
 </head>
 <body>
 
-	<% if !current_page?(root_path) %><%= render 'layouts/navigation' %><% end %>
+	<%= render 'layouts/navigation' %>
   <% if !current_page?(root_path) %><%= render 'layouts/title' %><% end %>
   <br />
   <%= render 'layouts/messages' %>
 	<%= yield %>
-	<% if !current_page?(root_path) %><%= render 'layouts/footer' %><% end %>
+	<%= render 'layouts/footer' %>
 
 </body>
 </html>

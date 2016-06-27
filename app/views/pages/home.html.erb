@@ -4,7 +4,7 @@
 		
 		<div class="col-md-12">
 
-			<div style="text-align:center; margin-top:30px; margin-bottom:50px;">
+			<div style="text-align:center; margin-top:30px;;">
 
 				<h1 class="homepageTitle"><span style="font-family: 'Open Sans', sans-serif; font-weight: normal; color:black;">T  O M  </span>  <span style="font-family: 'Quicksand', sans-serif; color: #818181; font-weight: normal;"> C A L D W E L L</span></h1><br />
 
@@ -22,29 +22,30 @@
 
 </div>
 
+<div class="intro home">
+
+	<div class="col-md-6 col-md-offset-3">
+
+		<div class="homeInfo">
+
+			<p id="homeIntro">Thanks for visiting! I am a web developer with experience in front-end development.</p>
+			<br />
+
+			<button class="btn btn-default btn-lg homeButton" type="button">So who on earth am I?</button>
+
+		</div>
+
+	</div>
+
+</div>
+
 <div class="container homeNav">
+
+	<br />
 
 	<div class="row">
 
-		<div class="col-md-6 col-md-offset-3">
-
-			<div id="homeNavigation">
-
-				<li><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li><br />
-
-				<li><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li><br />
-
-				<li><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li><br />
-
-				<li><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %></li><br />
-				
-				<% if signed_in? %>
-					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
-				<% end %>
-
-			</div>
-
-		</div>
+		
 
 	</div>
 
@@ -57,5 +58,14 @@
 
 	$(document).ready(function(){
 		$('.homeNav').fadeIn(5000);
+	});
+
+	$(".homeNav").css("min-height",$(window).height());
+	$(".home").css("min-height",$(window).height() / 1.5);
+
+	$(".homeButton").click(function() {
+		 $('html, body').animate({ 
+		 	scrollTop : $(".homeNav").position().top 
+		 }); 
 	});
 </script>
