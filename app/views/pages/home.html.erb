@@ -6,9 +6,9 @@
 
 			<div style="text-align:center; margin-top:30px; margin-bottom:50px;">
 
-				<h1 class="homepageTitle"><span style="font-family: 'Open Sans', sans-serif; font-weight: normal; color:black;">T  O M  </span>  <span style="font-family: 'Quicksand', sans-serif; color: white; font-weight: normal;"> C A L D W E L L</span></h1><br />
+				<h1 class="homepageTitle"><span style="font-family: 'Open Sans', sans-serif; font-weight: normal; color:black;">T  O M  </span>  <span style="font-family: 'Quicksand', sans-serif; color: #818181; font-weight: normal;"> C A L D W E L L</span></h1><br />
 
-				<h1 class="homepageTitle"><span style="font-family: 'Quicksand', sans-serif; color: white; font-weight: normal;"> D E V E L O P E R</span></h1>
+				<h1 class="homepageTitle"><span style="font-family: 'Quicksand', sans-serif; color: #818181; font-weight: normal;"> D E V E L O P E R</span></h1>
 
 				<br />
 
@@ -30,13 +30,13 @@
 
 			<div id="homeNavigation">
 
-				<li><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
+				<li><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li><br />
 
-				<li><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
+				<li><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li><br />
 
-				<li><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
+				<li><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li><br />
 
-				<li><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></li><br />
+				<li><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %></li><br />
 				
 				<% if signed_in? %>
 					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>

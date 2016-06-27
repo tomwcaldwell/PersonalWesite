@@ -1,45 +1,49 @@
 <div class="navbar navbar-default navbar-fixed-top fadeIn">
 
-	<div><a href="http://www.twitter.com/tc_web_dev" target="_blank"><%= image_tag('twitter.png', id: "twit_head", style: "float:left;") %></a></div>
+    <div class="container">
 
-	<div class="container">
+        <div class="navbar-left">
 
-		<div class="navbar-header">
+            <div id="myNav" class="overlay">
 
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border:none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+                <div class="overlay-content">
 
-			</button>
+                    <li <% if current_page?(root_path) %> class="active" <% end %>><%= link_to("HOME", root_path) %></li>
+					<li <% if current_page?(about_path) %> class="active" <% end %>><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li>
+					<li <% if current_page?(portfolio_path) %> class="active" <% end %>><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li>
+					<li <% if current_page?(blogs_path) %> class="active" <% end %>><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li>
+					<li style="border:none;" <% if current_page?(contact_path) %> class="active" <% end %>><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %></li>
+					<% if signed_in? %>
+						<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
+					<% end %>
 
-		</div>
+                </div>
 
-		<div class="collapse navbar-collapse">
+            </div>
 
-			<ul class="nav navbar-nav">
+            <span class="navOpen" style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; <span style="font-size:20px !important;" id="#menuTag">MENU</span></span>
 
-				<li <% if current_page?(root_path) %> class="active" <% end %>><%= link_to("HOME", root_path) %></li>
-				<li <% if current_page?(about_path) %> class="active" <% end %>><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li>
-				<li <% if current_page?(portfolio_path) %> class="active" <% end %>><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li>
-				<li <% if current_page?(blogs_path) %> class="active" <% end %>><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li>
-				<li style="border:none;" <% if current_page?(contact_path) %> class="active" <% end %>><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %></li>
-				<% if signed_in? %>
-					<li style="border:none;"><%= link_to("SIGN OUT", destroy_admin_session_path, :method => :delete) %></li>
-				<% end %>
+        </div>
 
-			</ul>
-
-		</div>
-
-	</div>
+    </div>
 
 </div>
+
+
+
 
 <script>
 	$(document).ready(function(){
 		$('.fadeIn').fadeIn(1000);
 	});
+
+	function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style="height = 0%";
+        }
 </script>
