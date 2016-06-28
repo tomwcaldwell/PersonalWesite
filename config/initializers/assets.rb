@@ -7,6 +7,7 @@ Rails.application.config.assets.precompile += %w( home_image.jpg)
 Rails.application.config.assets.precompile += %w( about_img.jpg )
 Rails.application.config.assets.precompile += %w( primes.png )
 Rails.application.config.assets.precompile += %w( my_position.png )
+Rails.application.config.assets.precompile += %w( newHomeBackground.jpg )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
