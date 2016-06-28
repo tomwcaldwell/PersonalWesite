@@ -49,10 +49,13 @@ ul, li {
 	list-style:none;
 }
 
+.clear {
+	clear:both;
+}
+
 body{
 	font-family: "Apercu Regular",Calibri,sans-serif;
 	padding:0;
-	margin-top:40px;
 	background-color:#F8F8F8;
 	letter-spacing:1px;
 	font-weight: normal;
@@ -155,25 +158,8 @@ body{
 }
 
 .homeNav {
-	background-color:grey;
+	background-color:#F0F0F0;
 	width:100%;
-}
-
-#homeNavigation {
-	float:left;
-	font-size:25px;
-	font-color:#818181;
-	width: 100%;
-	text-align:center;
-}
-
-#homeNavigation li a {
-	color:#818181;
-}
-
-#homeNavigation li a:hover {
-	color: black;
-	text-decoration:none;
 }
 
 .hidden {
@@ -204,6 +190,7 @@ body{
 	background-color:white !important;
 	width:100%;
 	height:100%;
+	margin-top:40px;
 }
 
 .home_image {
@@ -226,12 +213,6 @@ body{
 	margin-top: 20px;	
 	margin-bottom: 20px;
 	width: 220px;
-}
-
-#intro {
-	width:100%;
-	font-size:17px;
-	margin-bottom:20px;
 }
 
 #contact {
@@ -401,9 +382,10 @@ input[type=submit] {
 .intro {
 	width:100%;
 	margin:0 !important;
-	padding:0 !important;
-	background-color:#2296ef;
-	display:table;
+	padding-top:0 !important;
+	height:100% !important;
+	background: url('newHomeBackground');
+	text-align:center;
 }
 
 #homeIntro {
@@ -413,36 +395,45 @@ input[type=submit] {
 	margin-top:20px !important;
 	width:100%;
 	text-align:justify;
-	border:1px solid black;
 	padding:70px;
-	border-radius:75%;
-	background-color:#F8F8F8;
-}
-
-.homeInfo {
-	text-align:center !important;
-	display:table-cell;
-	vertical-align:middle;
+	color:white;
 }
 
 .homeButton {
-	display:table-cell;
-	vertical-align:bottom;
-	text-align:center;
-	width:200px;
-	height:70px;
-	border:1px solid black;
-	border-radius:10%;
+	margin:0 auto;
 	padding:20px;
+	border-radius:10%;
+}
+
+.home {
+	display:none;
+	height:400px;
+	width:100%;
+}
+
+.titleHome {
+	margin-top:50px;
+	margin-bottom:60px;
+}
+
+.otherNavigation {
+	display:none;
+}
+
+.homeInfo {
+	margin-top:50px;
+	display:none;
+}
+
+.homeInfo p {
+	color: white;
+	font-size:35px !important;
+	text-align:center !important;
 }
 
 @media only screen and (max-width : 1200px) {
 	.homepageTitle {
 		font-size:40px;
-	}
-
-	#homeNavigation {
-		font-size:20px;
 	}
 
 }
@@ -464,6 +455,10 @@ input[type=submit] {
 
 	.homepageTitle {
 		font-size:20px;
+	}
+
+	.homeButton {
+		padding:10px !important;
 	}
 
 }

@@ -1,20 +1,26 @@
-<div class="container fadeIn">
+<div class="container fadeIn intro">
 
 	<div class="row">
 		
-		<div class="col-md-12">
+		<div class="col-md-12 titleHome">
 
-			<div style="text-align:center; margin-top:30px;;">
+			<h1 class="homepageTitle"><span style="font-family: 'Open Sans', sans-serif; font-weight: normal; color:#C8C8C8;">T  O M  </span>  <span style="font-family: 'Quicksand', sans-serif; color: white; font-weight: normal;"> C A L D W E L L</span></h1>
 
-				<h1 class="homepageTitle"><span style="font-family: 'Open Sans', sans-serif; font-weight: normal; color:black;">T  O M  </span>  <span style="font-family: 'Quicksand', sans-serif; color: #818181; font-weight: normal;"> C A L D W E L L</span></h1><br />
+			<h1 class="homepageTitle"><span style="font-family: 'Quicksand', sans-serif; color: white; font-weight: normal;"> D E V E L O P E R</span></h1>
 
-				<h1 class="homepageTitle"><span style="font-family: 'Quicksand', sans-serif; color: #818181; font-weight: normal;"> D E V E L O P E R</span></h1>
+		</div>
 
-				<br />
+	</div>
 
-				<hr />
+	<div class="clear"></div>
 
-			</div>
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3 homeInfo">
+
+			<p>HELLO.</p>
+
+			<button class="btn btn-primary btn-lg homeButton" type="button"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
 
 		</div>
 
@@ -22,20 +28,9 @@
 
 </div>
 
-<div class="intro home">
+<div class="home">
 
-	<div class="col-md-6 col-md-offset-3">
 
-		<div class="homeInfo">
-
-			<p id="homeIntro">Thanks for visiting! I am a web developer with experience in front-end development.</p>
-			<br />
-
-			<button class="btn btn-default btn-lg homeButton" type="button">So who on earth am I?</button>
-
-		</div>
-
-	</div>
 
 </div>
 
@@ -52,20 +47,51 @@
 </div>
 
 <script>
+	
+	$(document).ready(function() {
+		$(".navbar").hide();
+	});
+
 	$(document).ready(function(){
 		$('.fadeIn').fadeIn(1000);
 	});
 
 	$(document).ready(function(){
-		$('.homeNav').fadeIn(5000);
+		$('.home').fadeIn(3000);
 	});
 
+	$(document).ready(function(){
+		$('.homeInfo').fadeIn(5000);
+	});
+
+	$(".intro").css("min-height",$(window).height());
+
+	$(".home").css("min-height",$(window).height());
+
 	$(".homeNav").css("min-height",$(window).height());
-	$(".home").css("min-height",$(window).height() / 1.5);
 
 	$(".homeButton").click(function() {
 		 $('html, body').animate({ 
-		 	scrollTop : $(".homeNav").position().top 
+		 	scrollTop : $(".home").position().top 
 		 }); 
 	});
+
+
+	(function ($) {
+	  $(document).ready(function(){
+
+	    $(function () {
+	        $(window).scroll(function () {
+
+	            if ($(this).scrollTop() > 300) {
+	                $('.navbar').fadeIn();
+	            } else {
+	                $('.navbar').hide();
+	            }
+
+	        });
+	    });
+
+	});
+  	}(jQuery));
 </script>
