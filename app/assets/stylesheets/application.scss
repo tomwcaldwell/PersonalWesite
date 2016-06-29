@@ -498,4 +498,24 @@ input[type=submit] {
 		padding:10px !important;
 	}
 
+	section {
+		height: 200px !important;
+	}
+
+	#parallaxImage1 {
+	width:100%;
+	height:400px;
+	background: url('parallaxImage1') 100% 0 no-repeat;
+	background-size:cover;
+	opacity: 0.9;
+}
+
+#parallaxImage2 {
+	width:100%;
+	height:400px;
+	background: url('parallaxImage2') 100% 0 fixed no-repeat;
+	background-size:cover;
+	opacity: 0.9;
+}
+
 }
