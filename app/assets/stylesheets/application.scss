@@ -148,12 +148,12 @@ body{
 
 @media screen and (max-width: 450px) {
 	.overlay {overflow-y: auto;}
-	.overlay a {font-size: 20px;}
+	.overlay a {font-size: 15px;}
 	.overlay-content {
 		top: 5% !important;
 	}
 	.closebtn {
-		font-size: 40px !important;
+		font-size: 1em;
 		top:15px;
 		right: 20px;
 	}
@@ -206,8 +206,8 @@ body{
 	display:none;
 }
 
-.twitter, .twitter-timeline {
-	margin:0 auto;
+.twitter {
+	text-align: center;
 	width: 100%;
 	margin: 20px 0 20px 0;
 	padding:0;
