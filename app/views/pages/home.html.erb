@@ -18,7 +18,12 @@
 
 		<div class="col-md-6 col-md-offset-3 homeInfo">
 
-			<p>HELLO.</p>
+			<p>WELCOME</p>
+
+		</div>
+
+
+		<div class="col-md-6 col-md-offset-3 homeInfo2">
 
 			<button class="btn btn-primary btn-lg homeButton" type="button"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
 
@@ -28,11 +33,37 @@
 
 </div>
 
+<section id="parallaxImage1" data-type="background" data-speed="10">
+
+</section>
+
 <div class="home">
 
+	<div class="container">
 
+		<div class="row">
+
+			<div class="col-md-6 col-md-offset-3 homepageInfo">
+
+				<p>So who am I?</p>
+
+			</div>
+
+			<div class="col-md-6 homepageInfo">
+
+				<p id="homepagePara">Glad you asked. My name is Tom Caldwell and I am a developer of web and iOS</p>
+
+			</div>
+
+		</div>
+
+	</div>
 
 </div>
+
+<section id="parallaxImage2" data-type="background" data-speed="10">
+
+</section>
 
 <div class="container homeNav">
 
@@ -62,6 +93,10 @@
 
 	$(document).ready(function(){
 		$('.homeInfo').fadeIn(5000);
+	});
+
+	$(document).ready(function(){
+		$('.homeInfo2').fadeIn(8000);
 	});
 
 	$(".intro").css("min-height",$(window).height());
