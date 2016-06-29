@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui/effect-shake
 //= require social-share-button
 //= bootstrap
 //= bootstrap.min

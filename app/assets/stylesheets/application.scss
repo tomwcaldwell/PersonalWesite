@@ -53,6 +53,11 @@ ul, li {
 	clear:both;
 }
 
+.btn:focus {
+	outline:none;
+	border:none;
+}
+
 body{
 	font-family: "Apercu Regular",Calibri,sans-serif;
 	padding:0;
@@ -145,7 +150,7 @@ body{
 	.overlay {overflow-y: auto;}
 	.overlay a {font-size: 20px;}
 	.overlay-content {
-		top: 10% !important;
+		top: 5% !important;
 	}
 	.closebtn {
 		font-size: 40px !important;
@@ -408,8 +413,8 @@ input[type=submit] {
 
 .home {
 	display:none;
-	height:400px;
 	width:100%;
+	margin-bottom:60px;
 }
 
 .titleHome {
@@ -434,6 +439,7 @@ input[type=submit] {
 
 .homeInfo2 {
 	margin-top:20px;
+	text-align:center;
 	display:none;
 }
 
@@ -449,6 +455,12 @@ input[type=submit] {
 
 #homepagePara {
 	text-align:justify;
+	font-size:21px !important;
+	width:100%;
+	margin:0 auto;
+}
+
+.homeParagraph {
 	font-size:18px !important;
 }
 
@@ -466,6 +478,14 @@ input[type=submit] {
 	background: url('parallaxImage2') 50% 0 repeat fixed;
 	background-size:cover;
 	opacity: 0.5;
+}
+
+.text-center {
+	text-align:center !important;
+}
+
+.portfolioButton{
+	margin-bottom: 50px;
 }
 
 @media only screen and (max-width : 1200px) {
@@ -503,19 +523,19 @@ input[type=submit] {
 	}
 
 	#parallaxImage1 {
-	width:100%;
-	height:400px;
-	background: url('parallaxImage1') 100% 0 no-repeat;
-	background-size:cover;
-	opacity: 0.9;
-}
+		width:100%;
+		height:400px;
+		background: url('parallaxImage1') 100% 0 no-repeat;
+		background-size:cover;
+		opacity: 0.9;
+	}
 
-#parallaxImage2 {
-	width:100%;
-	height:400px;
-	background: url('parallaxImage2') 100% 0 fixed no-repeat;
-	background-size:cover;
-	opacity: 0.9;
-}
+	#parallaxImage2 {
+		width:100%;
+		height:400px;
+		background: url('parallaxImage2') 100% 0 fixed no-repeat;
+		background-size:cover;
+		opacity: 0.9;
+	}
 
 }

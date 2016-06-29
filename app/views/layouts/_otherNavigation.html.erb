@@ -11,7 +11,6 @@
                 <div class="overlay-content">
 
                     <li <% if current_page?(root_path) %> class="active" <% end %>><%= link_to("HOME", root_path) %></li>
-					<li <% if current_page?(about_path) %> class="active" <% end %>><%= link_to("ABOUT", {:controller => 'pages', :action => 'about'}) %></li>
 					<li <% if current_page?(portfolio_path) %> class="active" <% end %>><%= link_to("PORTFOLIO", {:controller => 'pages', :action => 'portfolio'}) %></li>
 					<li <% if current_page?(blogs_path) %> class="active" <% end %>><%= link_to("BLOG", {:controller => 'blogs', :action => 'index'}) %></li>
 					<li style="border:none;" <% if current_page?(contact_path) %> class="active" <% end %>><%= link_to("CONTACT", {:controller => 'contacts', :action => 'new'}) %></li>

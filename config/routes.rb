@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get 'about', to: 'pages#about'
   get 'portfolio', to: 'pages#portfolio'
   get 'contact', to: 'contacts#new', via: 'get'
   get 'blog', to: 'blogs#index'
