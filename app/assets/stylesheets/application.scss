@@ -522,14 +522,14 @@ input[type=submit] {
 }
 
 .portfolioProject {
-	border:1px solid black;
 	margin-bottom:20px;
+	border:1px solid black;
 }
 
 .appBox {
-	height:100%;
+	height:300px;
 	width:100%;
-	margin:25px 0 25px 0;
+	margin:0 0 50px 0;
 	text-align:center;
 	border-radius: 5px;
 	position:relative;
@@ -590,9 +590,27 @@ input[type=submit] {
 	margin: 0 auto;
 }
 
+.portfolioPageImage {
+	width:100%;
+	height:100%;
+	padding:30px;
+	border-radius:100px !important;
+}
+
 @media only screen and (max-width : 1200px) {
 	.homepageTitle {
 		font-size:40px;
+	}
+
+	.appBox {
+		width: 75%;
+		height: 75%;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.portfolioProject {
+		border:none;
 	}
 
 }
@@ -638,10 +656,6 @@ input[type=submit] {
 		background: url('parallaxImage2') 100% 0 fixed no-repeat;
 		background-size:cover;
 		opacity: 0.9;
-	}
-
-	.portfolioProject {
-		border:none;
 	}
 
 }
