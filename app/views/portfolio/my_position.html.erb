@@ -1,0 +1,55 @@
+<div class="container fadeIn">
+
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3 text-center">
+
+			<h1>My Position</h1><br />
+
+			<div class="projectImage">
+
+				<%= image_tag('my_position.png', style: "width:100%; height:100%; padding:30px;") %>
+
+			</div>
+
+			<div class="projectInfo">
+
+				<p style="font-size:21px !important;"><small>TYPE OF APPLICATION:</small> Mobile App</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="projectDescription">
+
+				<p style="text-align:justify; font-size:18px !important;">My-Position is an app which lets you track your current location and other variables relating. It uses your GPS to find your location, then gives the latitude and longitude of the location as well as the nearest address.</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="text-center">
+
+				<a href="https://itunes.apple.com/gb/app/my-position/id1123844481?mt=8" class="btn btn-success btn-lg portfolioPageButton" target="_blank">View MyPosition in iOS App Store</a>
+
+			</div>
+
+			<div class="text-center">
+
+				<%= link_to("Back to Portfolio", portfolio_path, class: "btn btn-success btn-lg portfolioPageButton") %>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fade').fadeIn(1000);
+	});
+</script>

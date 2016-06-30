@@ -1,0 +1,55 @@
+<div class="container fadeIn">
+
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3 text-center">
+
+			<h1>The Conservatory Life</h1><br />
+
+			<div class="projectImage">
+
+				<%= image_tag('conservatory.jpg', style: "width:100%; height:100%; padding:30px;") %>
+
+			</div>
+
+			<div class="projectInfo">
+
+				<p style="font-size:21px !important;"><small>TYPE OF APPLICATION:</small> Website</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="projectDescription">
+
+				<p style="text-align:justify; font-size:18px !important;">The Conservatory Life is a website where you can find all sorts of information regarding conservatories. I give you much information about the types, accessories, roofs and prices. Click on the logo or the title to take you to the website.</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="text-center">
+
+				<a href="http://www.theconservatorylife.com/" class="btn btn-success btn-lg portfolioPageButton" target="_blank">View The Conservatory Life website</a>
+
+			</div>
+
+			<div class="text-center">
+
+				<%= link_to("Back to Portfolio", portfolio_path, class: "btn btn-success btn-lg portfolioPageButton") %>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fade').fadeIn(1000);
+	});
+</script>

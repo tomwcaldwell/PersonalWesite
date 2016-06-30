@@ -1,0 +1,55 @@
+<div class="container fadeIn">
+
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3 text-center">
+
+			<h1>Winchester Independents</h1><br />
+
+			<div class="projectImage">
+
+				<%= image_tag('wind_logo.png', style: "width:100%; height:100%; padding:30px;") %>
+
+			</div>
+
+			<div class="projectInfo">
+
+				<p style="font-size:21px !important;"><small>TYPE OF APPLICATION:</small> Website</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="projectDescription">
+
+				<p style="text-align:justify; font-size:18px !important;">The Winchester Independents is a website built in the form of a portfolio for a new independent council party in Winchester, Hampshire. The use of the site is to explain what they do, who they are and how you can get involved in their aims</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="text-center">
+
+				<a href="http://www.wind.org.uk/" class="btn btn-success btn-lg portfolioPageButton" target="_blank">View Winchester Independents website</a>
+
+			</div>
+
+			<div class="text-center">
+
+				<%= link_to("Back to Portfolio", portfolio_path, class: "btn btn-success btn-lg portfolioPageButton") %>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fade').fadeIn(1000);
+	});
+</script>

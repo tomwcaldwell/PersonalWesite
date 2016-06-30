@@ -1,0 +1,55 @@
+<div class="container fadeIn">
+
+	<div class="row">
+
+		<div class="col-md-6 col-md-offset-3 text-center">
+
+			<h1>In or Out EU UK</h1><br />
+
+			<div class="projectImage">
+
+				<%= image_tag('inorout.jpg', style: "width:100%; height:100%; padding:30px;") %>
+
+			</div>
+
+			<div class="projectInfo">
+
+				<p style="font-size:21px !important;"><small>TYPE OF APPLICATION:</small> Website</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="projectDescription">
+
+				<p style="text-align:justify; font-size:18px !important;">In or Out EU UK is a website I developed to help people get a clear understanding of the UK's 2016 EU referendum. Since there were so much bias information out there, and a lack of honest, clear and simple advice, I decided to put this site together. It's design is a simple parallax.</p>
+
+			</div>
+
+			<br />
+			<br />
+
+			<div class="text-center">
+
+				<a href="http://www.inorouteu.uk" class="btn btn-success btn-lg portfolioPageButton" target="_blank">View In or Out website</a>
+
+			</div>
+
+			<div class="text-center">
+
+				<%= link_to("Back to Portfolio", portfolio_path, class: "btn btn-success btn-lg portfolioPageButton") %>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fade').fadeIn(1000);
+	});
+</script>

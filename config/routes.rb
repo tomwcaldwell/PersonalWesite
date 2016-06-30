@@ -12,6 +12,16 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'pages#portfolio'
   get 'contact', to: 'contacts#new', via: 'get'
   get 'blog', to: 'blogs#index'
+  
+
+  get 'portfolio/poverty_facts', to: 'portfolio#poverty_facts'
+  get 'portfolio/what_day', to: 'portfolio#what_day'
+  get 'portfolio/primes', to: 'portfolio#primes'
+  get 'portfolio/my_position', to: 'portfolio#my_position'
+  get 'portfolio/the_conservatory_life', to: 'portfolio#the_conservatory_life'
+  get 'portfolio/the_egg_house', to: 'portfolio#the_egg_house'
+  get 'portfolio/winchester_independents', to: 'portfolio#winchester_independents'
+  get 'portfolio/in_or_out_eu_uk', to: 'portfolio#in_or_out_eu_uk'
 
   resources "contacts", only: [:new, :create]
   

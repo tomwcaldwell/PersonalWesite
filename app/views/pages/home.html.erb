@@ -18,7 +18,7 @@
 
 		<div class="col-md-6 col-md-offset-3 homeInfo">
 
-			<p>WELCOME, THANK YOU VISITING</p>
+			<p id="welcome">WELCOME, THANK YOU FOR VISITING</p>
 
 		</div>
 
@@ -114,7 +114,7 @@
 	});
 
 	$(".homeButton").hover(function() {
-  		$(".titleHome").effect("pulsate");
+  		$("#welcome").effect("bounce");
 	});
 
 	$(".intro").css("min-height",$(window).height());

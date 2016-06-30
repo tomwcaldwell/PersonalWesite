@@ -521,12 +521,73 @@ input[type=submit] {
 	border: 1px solid black;
 }
 
+.portfolioProject {
+	border:1px solid black;
+	margin-bottom:20px;
+}
+
 .appBox {
 	height:100%;
 	width:100%;
-	border: 1px solid black;
 	margin:25px 0 25px 0;
 	text-align:center;
+	border-radius: 5px;
+	position:relative;
+}
+
+.portfolioText {
+	display:none;
+}
+
+.appBox:hover .overlayImage {
+	opacity:0.5;
+	height:100% !important;
+	background-color: black;
+}
+
+.appBox:hover .overlayImage p {
+	display:inline-block;
+}
+
+.overlayImage {
+	backgroung-color:red;
+	opacity:0.9 !important;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+.portfolioText {
+	text-align:center;
+	font-size:30px !important;
+	padding-top:20px;
+	color:white !important;
+}
+
+.portfolioPageButton{
+	margin-bottom: 50px;
+	background:none !important;
+	color:black;
+	border-color:black;
+}
+
+.portfolioPageButton:hover{
+	margin-bottom: 50px;
+	background-color:black !important;
+	color:white !important;
+}
+
+.portfolioPageButton:focus{
+	margin-bottom: 50px;
+	background:none !important;
+	color:black !important;
+	border: 1px solid black !important;
+}
+
+.projectImage {
+	width:300px;
+	height:300px;
+	margin: 0 auto;
 }
 
 @media only screen and (max-width : 1200px) {
@@ -577,6 +638,10 @@ input[type=submit] {
 		background: url('parallaxImage2') 100% 0 fixed no-repeat;
 		background-size:cover;
 		opacity: 0.9;
+	}
+
+	.portfolioProject {
+		border:none;
 	}
 
 }
