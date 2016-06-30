@@ -483,6 +483,50 @@ input[type=submit] {
 
 .portfolioButton{
 	margin-bottom: 50px;
+	background:none !important;
+	color:black;
+	border-color:black;
+}
+
+.portfolioButton:hover{
+	margin-bottom: 50px;
+	background:green !important;
+	color:white;
+}
+
+.portfolioButton:focus{
+	margin-bottom: 50px;
+	background:none !important;
+	color:black;
+	border: 1px solid black;
+}
+
+.contactButton{
+	margin-bottom: 50px;
+	background:none !important;
+	color:black;
+	border-color:black;
+}
+
+.contactButton:hover{
+	margin-bottom: 50px;
+	background:red !important;
+	color:white;
+}
+
+.contactButton:focus{
+	margin-bottom: 50px;
+	background:none !important;
+	color:black;
+	border: 1px solid black;
+}
+
+.appBox {
+	height:100%;
+	width:100%;
+	border: 1px solid black;
+	margin:25px 0 25px 0;
+	text-align:center;
 }
 
 @media only screen and (max-width : 1200px) {
